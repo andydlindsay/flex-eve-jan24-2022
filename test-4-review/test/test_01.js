@@ -6,10 +6,10 @@ describe("doShortly", function() {
   // switch from 2 second default mocha timeout to 1 second.
   this.timeout(1000);
 
-  before(() => {
-    console.log(`LHL Note: "Timeout of 2000ms exceeded..." is a generic message from Mocha if our delayed execution doesn't happen.`)
-    console.log(`           Mocha waits 2 seconds (by default) before giving up on the test. This error should go away once the callback is invoked.`);
-  })
+  // before(() => {
+  //   console.log(`LHL Note: "Timeout of 2000ms exceeded..." is a generic message from Mocha if our delayed execution doesn't happen.`)
+  //   console.log(`           Mocha waits 2 seconds (by default) before giving up on the test. This error should go away once the callback is invoked.`);
+  // })
 
   it("calls/invokes the provided callback", (done) => {
     doShortly(() => {

@@ -27,6 +27,29 @@ Expected Result:
 
 const allPlayerNames = function(outcomes) {
   // IMPLEMENT ME
+
+  // create an array for the player's names
+  const players = [];
+
+  // iterate through the array
+  for (const outcome of outcomes) {
+    // console.log(outcome);
+    const winner = outcome.winner;
+    const loser = outcome.loser;
+
+    if (!players.includes(winner)) {
+      players.push(winner);
+    }
+
+    if (!players.includes(loser)) {
+      players.push(loser);
+    }
+
+    // console.log(winner, loser);
+  }
+
+  // return the array
+  return players;
 };
 
 

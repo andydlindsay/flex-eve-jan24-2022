@@ -17,9 +17,24 @@ Use the request library (https://www.npmjs.com/package/request) to fetch data.
 The request library is already installed in this project, and you can require and use it.
 
 */
+const request = require('request');
 
 const fetchDataForUser = function(url, username, callback) {
   // IMPLEMENT ME
+  request(url, (error, response, body) => {
+    if (error) {
+      callback(error, null);
+      return;
+    }
+
+    // console.log(body);
+    const parsedBody = JSON.parse(body);
+
+    const result = parsedBody.users[username];
+    // console.log(result);
+
+    callback(null, result);
+  });
 };
 
 

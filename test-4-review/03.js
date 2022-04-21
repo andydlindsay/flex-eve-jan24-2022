@@ -23,10 +23,33 @@ The callback should be called with two arguments:
 - Don't worry about other edge cases. For example, you can assume that if the given files are there, they WILL contain valid numbers.
 
 */
+const fs = require('fs');
 
 const sumFileData = function(filePath1, filePath2, callback) {
   // IMPLEMENT ME
+
+  fs.readFile(filePath1, {encoding: 'utf-8'}, (err, numberOne) => {
+    if (err) {
+      return callback(err, null);
+    }
+
+    // console.log(numberOne);
+    fs.readFile(filePath2, {encoding: 'utf-8'}, (err, numberTwo) => {
+      if (err) {
+        return callback(err, null);
+      }
+
+      const result = Number(numberOne) + Number(numberTwo);
+      // console.log(result);
+
+      callback(null, result);
+    });
+  });
 };
+
+// sumFileData('./index.html', (err, data) => {
+//   console.log(data);
+// });
 
 
 // Don't change below:

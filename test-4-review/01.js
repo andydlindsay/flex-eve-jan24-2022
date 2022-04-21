@@ -13,6 +13,15 @@ Arguments:
 
 const doShortly = function(callback, delay, data) {
   // IMPLEMENT ME
+
+  // wait a specified amount of time (delay)
+  const performAction = () => {
+    // after the delay, we call the callback with the data variable
+    callback(data);
+  };
+
+  setTimeout(performAction, delay);
+
 };
 
 

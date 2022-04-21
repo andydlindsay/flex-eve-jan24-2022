@@ -17,6 +17,25 @@ However:
 
 const doShortlyExpectingTruthy = function(callback, delay, data) {
   // IMPLEMENT ME
+
+  // return a Promise
+  const myPromise = new Promise((resolve, reject) => {
+    // wait a specified amount of time
+    setTimeout(() => {
+      // call the callback with the provided data; and capture the return value
+      const returnVal = callback(data);
+
+      // if the return value is falsey, reject with "Falsy value retrieved"
+      if (!returnVal) {
+        return reject("Falsy value retrieved");
+      }
+
+      // if the reutrn value is truthy, resolve with the return value
+      resolve(returnVal);
+    }, delay);
+  });
+
+  return myPromise;
 };
 
 
