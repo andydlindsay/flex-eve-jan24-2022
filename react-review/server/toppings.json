@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "pepperoni"
+  },
+  {
+    "id": 2,
+    "name": "ham"
+  },
+  {
+    "id": 3,
+    "name": "pineapple"
+  },
+  {
+    "id": 4,
+    "name": "olives"
+  },
+  {
+    "id": 5,
+    "name": "bacon"
+  },
+  {
+    "id": 6,
+    "name": "green peppers"
+  },
+  {
+    "id": 7,
+    "name": "salmon"
+  }
+]
