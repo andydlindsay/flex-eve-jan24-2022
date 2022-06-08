@@ -1,23 +1,6 @@
 # BREAKOUT - React Review
 
 ### To Do
-- [ ] Props
-- [ ] State
-- [ ] Data Fetching / CORS issues
-- [ ] Questions?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [x] Props
+- [x] State
+- [x] Questions?
